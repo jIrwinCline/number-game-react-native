@@ -5,7 +5,6 @@ const Card = (props) => {
     return (
         <View style={{...styles.card, ...props.style}}>
             {props.children}
-            <Text></Text>
         </View>
     )
 }
