@@ -1,20 +1,28 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
+
+import Card from '../components/Card';
+import Input from '../components/Input';
+import Colors from '../constants/colors'; 
 
 const StartGameScreen = props => {
     return (
-        <View style={styles.screen}>
-            <Text style={styles.title}>Start a New Game!</Text>
-            <View style={styles.inputContainer}>
-                <Text>Select a Number</Text>
-                <TextInput />
-                <View style={styles.buttonContainer}>
-                    <Button title='reset' onPress={() => {}}/>
-                    <Button title='Confirm' onPress={() => {}}/>
-                </View>
+      <View style={styles.screen}>
+        <Text style={styles.title}>Start a New Game!</Text>
+        <Card style={styles.inputContainer}>
+          <Text>Select a Number</Text>
+          <Input style={styles.input} blurOnSubmit keyboardType='numeric' maxLength={2}/>
+          <View style={styles.buttonContainer}>
+            <View style={styles.button}>
+              <Button color={Colors.accent} title="reset" onPress={() => {}} />
             </View>
-        </View>
-    )
+            <View style={styles.button}>
+              <Button color={Colors.primary} title="Confirm" onPress={() => {}} />
+            </View>
+          </View>
+        </Card>
+      </View>
+    );
 }
 
 const styles = {
@@ -31,19 +39,19 @@ const styles = {
         width: 300,
         maxWidth: '80%',
         alignItems: 'center',
-        shadowColor: 'black',
-        shadowOffset: {width: 0, height: 2},
-        shadowRadius: 6,
-        shadowOpacity: 0.26,
-        elevation: 5,
-        backgroundColor: 'white'
-
     },
     buttonContainer: {
         flexDirection: 'row',
         width: '100%',
         justifyContent: 'space-between',
         paddingHorizontal: 15
+    },
+    button: {
+        width: '40%',
+    },
+    input: {
+      width: 50,
+      textAlign: 'center',
     }
 }
 
