@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StylesSheet } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 
 const GameOverScreen = () => {
     return (
@@ -9,7 +9,7 @@ const GameOverScreen = () => {
     )
 }
 
-const styles = StylesSheet.create({
+const styles = StyleSheet.create({
     screen: {
         flex: 1,
         justifyContent: 'center',
