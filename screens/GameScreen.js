@@ -10,7 +10,7 @@ import {
   Dimensions
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-
+// import {screenOrientation } from 'expo';
 import NumberContainer from "../components/NumberContainer";
 import MainButton from "../components/MainButton";
 import BodyText from "../components/BodyText";
